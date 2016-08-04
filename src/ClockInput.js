@@ -37,7 +37,7 @@ export default class ClockInput extends Component {
 
     this.dateFormat = dateFormat
 
-    this.value = props.value !== undefined ? props.value : this.state.value
+    this.value = props.value !== undefined ? props.value : props.defaultValue !== undefined ? props.defaultValue : this.state.value
 
     const className = join(
       props.className,
